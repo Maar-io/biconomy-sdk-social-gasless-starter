@@ -60,6 +60,8 @@ const Counter: React.FC<Props> = ({ smartAccount, provider }) => {
         theme: "dark",
         });
       const incrementTx = await counterContract.populateTransaction.incrementCount()
+      console.log({incrementTx})
+      console.log("counterAddress: {counterAddress}")
       const tx1 = {
         to: counterAddress,
         data: incrementTx.data,
